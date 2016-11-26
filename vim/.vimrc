@@ -59,10 +59,10 @@ filetype plugin indent on    " required
 
 
 let mapleader = ','				"The default leader is \ comma is better
-set number
-inoremap ( ()<left>
-inoremap { {}<left>
-inoremap [ []<left>
+"set number
+"inoremap ( ()<left>
+"inoremap { {}<left>
+"inoremap [ []<left>
 
 "-----------------Javascript---------------"
 filetype plugin indent on
@@ -103,8 +103,7 @@ endif
 
 "-----------------Ned a name for this conf---------------"
 set clipboard=unnamed
-
-
+set mouse=a
 
 "-----------------Visuals---------------"
 
@@ -115,7 +114,11 @@ let base16colorspace=256
 set background=dark
 set laststatus=2
 let g:airline_powerline_fonts = 1
-set guifont=Monaco_Linux-Powerline:h12
+"set guifont="asdasd":h14
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
 
 
 set encoding=utf8
@@ -170,4 +173,11 @@ augroup  autosourcing
 	autocmd BufWritePost .vimrc source %
 augroup END
 
+
+" Scrolling
+" =========
+" Start scrolling when we're getting close to margins
+set scrolloff=10
+set sidescrolloff=15
+set sidescroll=1
 
